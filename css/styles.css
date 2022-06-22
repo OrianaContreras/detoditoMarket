@@ -393,7 +393,7 @@ header nav a:hover {
 
 .flex-start{
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-start !important;
     align-items: center;
 }
 
@@ -427,6 +427,12 @@ header nav a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.flex-column-start{
+    display: flex;
+    flex-direction: column !important;
+
 }
 
 /* Espaciados y margenes */
@@ -555,7 +561,7 @@ input.usuario {
     border-radius: 0.3em;
 }
 
-input.email {
+input.contrasena {
     background-image: url('../img/mail-bronce.svg');
     background-repeat: no-repeat;
     background-position: 15px 7px;
@@ -573,11 +579,22 @@ button {
     border-radius: 0.3em;
     cursor: pointer;
     transition: all ease-in-out 400ms;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 button:hover {
     background-color: #00000081;
     
+}
+
+.a-registro {
+    font-size: .9rem;
+    text-decoration: underline;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #000000;
 }
 
 input[type="checkbox"] {
@@ -599,17 +616,17 @@ input[type="checkbox"]:checked + label::before {
 /* Footer */
 
 footer {
-    background-color: #424242;
+    background-color: #ffffff;
 
 }
 
 footer p{
-    color: rgba(225, 225, 225, 0.8);
+    color: rgba(3, 3, 3, 0.8);
 
 }
 
 footer p:first-child{
-    color: #ffffff;
+    color: #000000;
     font-weight: bold;
 }
 
@@ -620,7 +637,7 @@ footer img.rrss {
 
 footer a {
     font-size: 0.8rem;
-    color: #5f88ff;
+    color: #000000;
     transition: 400ms ease-in-out;
 }
 
@@ -630,7 +647,7 @@ footer a:hover {
 }
 
 footer .copyright {
-    color: rgba(225, 225, 225, 0.8);
+    color: rgba(0, 0, 0, 0.8);
     font-size: 0.8rem;
     text-align: center;
 }
