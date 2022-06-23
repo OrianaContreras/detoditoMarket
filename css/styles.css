@@ -66,6 +66,7 @@ img {
 
 p {
     margin-bottom: 0.8rem;
+    color: #000000;
 }
 
 /* Hero */    /* (Animation with trancition of the background page )  */
@@ -228,6 +229,22 @@ header nav a:hover {
     
 }
 
+.producto {
+    padding-left: 3em;
+    border-radius: 0.3em;
+}
+
+.form-ingresar {
+    margin-top: 3rem;
+}
+
+.title-form {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #000000;
+    text-decoration: underline;
+}
+
 
 /* Burger Button */
 
@@ -238,18 +255,21 @@ header nav a:hover {
     cursor: pointer;
     z-index: 10;
     display: none; /* Nace con medidas convencionales */
+    background-color: #ffffff;
+    border-radius: 0.3rem;
+    border: #000000 1px solid ;
 }
 
 #burger .barra {
     width: 30px;
     height: 2px;
     margin: 6px;
-    background-color: #5f88ff;
+    background-color: #000000;
     transition: 400ms all ease-in-out
 }
 
 #burger.abierto .barra {
-    background-color: white;
+    background-color: rgb(0, 0, 0);
 }
 
 #burger.abierto .barra.superior {
@@ -435,10 +455,18 @@ header nav a:hover {
 
 }
 
+.incre-decre {
+    margin: 0 auto;
+}
+
 /* Espaciados y margenes */
 
 .m-t {
     margin-top: 1rem;
+}
+
+.m-t5 {
+    margin-top: 5rem;
 }
 
 .m-l {
@@ -467,6 +495,10 @@ header nav a:hover {
 
 .m-b-small {
     margin-bottom: 0.5rem;
+}
+
+.scanner {
+border: #000000 solid 2px ;
 }
 
 
@@ -500,9 +532,9 @@ header nav a:hover {
 }
 
 .caja-nav a {
-    border: 1px solid #5f88ff;
-    background-color: white;
-    color: #5f88ff;
+    /* border: 1px solid #5f88ff; */
+    /* background-color: white;
+    color: #5f88ff; */
     font-size: 1rem;
     font-weight: normal;
     padding: 0.5em 1em;
@@ -511,11 +543,11 @@ header nav a:hover {
     transition: all ease-in-out 400ms;
 }
 
-.caja-nav a:hover {
+/* .caja-nav a:hover {
     background-color: white;
     color: white;
 }
-
+ */
 /* Contact Form */
 
 form.contacto {
@@ -553,6 +585,14 @@ input:focus {
     border-bottom: 1.5px solid #000000;
 }
 
+input.email {
+    background-image: url('../img/mail-bronce.svg');
+    background-repeat: no-repeat;
+    background-position: 15px 7px;
+    padding-left: 3em;
+    border-radius: 0.3em;
+}
+
 input.usuario {
     background-image: url('../img/user.svg');
     background-repeat: no-repeat;
@@ -562,9 +602,9 @@ input.usuario {
 }
 
 input.contrasena {
-    background-image: url('../img/mail-bronce.svg');
+    background-image: url('../img/contrasena.svg');
     background-repeat: no-repeat;
-    background-position: 15px 7px;
+    background-position: 15px 8px;
     padding-left: 3em;
     border-radius: 0.3em;
 }
