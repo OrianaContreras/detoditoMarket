@@ -12,6 +12,10 @@
     box-sizing: border-box;
 }
 
+.banner-mobile {
+    display: none;
+}
+
 a{
     text-decoration: none;
     cursor: pointer;
@@ -239,6 +243,7 @@ header nav a:hover {
 }
 
 .title-form {
+    font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #000000;
@@ -296,17 +301,25 @@ header nav a:hover {
     header nav {
         display: none;
     }
+
+    .banner {
+        display: none;
+    }
+
+    .banner-mobile {
+        display: block;
+    }
 }
 
 /* Menú lateral */
 
 .menu {
-    width: 360px;
+    width: 320px;
     height: 100vh;
-    background-color: #424242;
+    background-color: #000000;
     position: fixed;
-    top: 0;
-    left: -360px;
+    top: 15px;
+    left: -3200px;
     padding-top: 40px;
     transition: all 700ms ease-in-out;
 }
@@ -322,7 +335,7 @@ header nav a:hover {
 }
 
 .menu nav a {
-    padding: 0.6rem 0;
+    padding: 0.5rem 0;
     color: rgba(255, 255, 255, 0.75);
     font-size: 1.1rem;
     transition: 300ms all ease-in-out;
@@ -346,9 +359,14 @@ header nav a:hover {
 
 
 /* layout */
+.banner {
+    margin-top: 10vh;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
 
 .primera {
-    margin-top: 100vh;
+    margin-top: .5vh;
 }
 
 #pr{
@@ -751,6 +769,34 @@ footer .copyright {
 .card .footer-card a:hover {
     background-color: #664626;
 }
+
+.card-selected {
+    width: 360px;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 4px grey;
+    display: flex;
+    flex-direction: initial;
+    align-items: center;
+    overflow: hidden;
+    background-color: #ffffff;
+    margin-bottom: 1rem;
+    justify-content: space-around;
+}
+
+.card-selected img {
+    height: 100px;
+    justify-content: flex-start;
+} 
+
+.card-selected .footer-card-selected a {
+    background-color: #5f88ff;
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 0.3em;
+    padding: 0.5em 1em;
+    align-self: center;
+    transition: 400ms ease-in all;
+}   
 
 /* Properti file  */
 
