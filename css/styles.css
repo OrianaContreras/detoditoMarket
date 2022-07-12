@@ -198,7 +198,7 @@ header {
 } 
 
 header.transparente {
-    background-color: transparent;
+    background-color: white;
     box-shadow: none;
 }
 
@@ -215,7 +215,7 @@ header nav a {
 }
 
 header.transparente nav a {
-    color: rgba(225, 225, 225, 0.9);
+    color: rgba(0, 0, 0, 0.9);
 }
 
 header nav a.activo,
@@ -363,10 +363,18 @@ header nav a:hover {
     margin-top: 10vh;
     margin-left: 1rem;
     margin-right: 1rem;
+    width: 100vw;
+    height: 100vh;
 }
 
 .primera {
     margin-top: .5vh;
+}
+
+.flecha-abajo {
+    display: flex;
+    justify-content: center;
+
 }
 
 #pr{
@@ -375,12 +383,15 @@ header nav a:hover {
     padding-bottom: 90px;
 }
 
+.saludo-user {
+    color: #000000 !important;
+}
 
 .fila {
     display: flex;
     justify-content: space-between;
     padding: 2rem 1rem;
-   
+    background-color: white;
 } 
 
 .col-100 {
@@ -523,7 +534,7 @@ border: #000000 solid 2px ;
 /* Parallax */
 
 .fila.parallax{
-    background-image: url('../img/property5.jpg');
+    background-image: url('../img/banner-oculto.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -674,17 +685,17 @@ input[type="checkbox"]:checked + label::before {
 /* Footer */
 
 footer {
-    background-color: #ffffff;
+    background-color: #424242 !important;
 
 }
 
 footer p{
-    color: rgba(3, 3, 3, 0.8);
+    color: rgba(255, 255, 255, 0.8);
 
 }
 
 footer p:first-child{
-    color: #000000;
+    color: #ffffff;
     font-weight: bold;
 }
 
@@ -705,7 +716,7 @@ footer a:hover {
 }
 
 footer .copyright {
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 0.8rem;
     text-align: center;
 }
@@ -722,7 +733,7 @@ footer .copyright {
 }
 
 .card {
-    width: 360px;
+    width: 180px;
     border-radius: 0.5rem;
     box-shadow: 2px 2px 4px grey;
     display: flex;
@@ -734,10 +745,28 @@ footer .copyright {
 }
 
 .card img {
-    height: 320px;
+    height: 140px;
 } 
 
+.div-coleccion {
+    position: relative;  
+}
 
+.coleccion {
+    position: absolute;
+    right: 25%;
+    top: 40%;
+    color: #000000;
+    /* -webkit-text-stroke: .1px rgb(0, 0, 0); */
+    font-weight: bolder;
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+    /* margin: 0 auto !important; */
+}
+
+.opacidad {
+    opacity: .6;
+}
 
 .card .footer-card {
     padding: 0.8rem;
@@ -821,4 +850,11 @@ footer .copyright {
 .propiedad div:first-child p img {
     width: 28px;
     height: 28px;
+}
+
+.title {
+    color: #000000;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
 }
