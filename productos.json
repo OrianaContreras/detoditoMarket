@@ -1,0 +1,14 @@
+[
+    {
+        "precio": 3500,
+        "id": 1,
+        "title": "Jugo de Naranja Light",
+        "thumbnailUrl": "img/thumb13.jpg"
+    },
+    {
+        "precio": 1870,
+        "id": 2,
+        "title": "Coca-Cola sin azúcar 1.5 L",
+        "thumbnailUrl": "img/thumb8.jpg"
+    }
+]

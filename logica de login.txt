@@ -1,9 +1,0 @@
-void main() async {
-  String _defaultHome = "/user_home";
-  bool user = await Helper.getLoggeduser();
-  if (user.isAdmin) {
-    _defaultHome = "/admin_home";
-  }
-
-  runApp(App(home: _defaultHome));
-}

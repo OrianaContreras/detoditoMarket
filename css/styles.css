@@ -387,6 +387,14 @@ header nav a:hover {
     color: #000000 !important;
 }
 
+.fila-azul {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    background-color:#5f88ff;
+} 
+
+
 .fila {
     display: flex;
     justify-content: space-between;
@@ -726,7 +734,7 @@ footer .copyright {
 .fila.grid {
     margin-top: 100px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 360px);
+    grid-template-columns: repeat(auto-fit, 170px);
     grid-gap: 1.5rem;
     justify-content: center;
 

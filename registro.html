@@ -36,22 +36,22 @@
         <div class="col-100 flex-column-center">
             <form  class="contacto" style=" background-color: #5f88ff;">
                 <div style="background-color: #5f88ff;" class="fila">
-                    <input class="usuario" type="text" placeholder="Usuario">
+                    <input class="usuario" type="text" placeholder="Usuario" required>
                 </div>
                 <div style="background-color: #5f88ff;" class="fila">
-                    <input class="email" type="email" placeholder="Email">
+                    <input class="email" type="email" placeholder="Email" required>
                 </div>
                 <div style="background-color: #5f88ff;" class="fila">
-                    <input class="contrasena" type="password" placeholder="Contraseña">
+                    <input class="contrasena" type="password" placeholder="Contraseña" required>
                 </div>
                 <div style="background-color: #5f88ff;" class="fila flex-start">
-                    <input type="checkbox"  id="condiciones">
+                    <input type="checkbox"  id="condiciones" required>
                     <label for="condiciones" style="color: #ffffff;">
                         Acepto las condiciones legales
                     </label>
                 </div>
                 <div class="fila flex-end" style="background-color: #5f88ff;">
-                    <button type="submit" ><a href="home.html">Registrarme</a></button>
+                    <button type="submit" onclick="confirmacionRegistro()" ><a href="index.html">Registrarme</a></button>
                 </div>
             </form>
         </div>
@@ -88,5 +88,6 @@
             <p class="copyright m-t">&copy; D'TODITO MARKET All rights reserved</p>
         </div>
     </footer>
+    <script src="/js/main.js"></script>
 </body>
 </html>

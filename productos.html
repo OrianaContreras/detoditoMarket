@@ -8,10 +8,16 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/main.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
 </head>
 <body>
     <header >
-        <img src="img/logo.svg" alt="Logo Impirial Real State">
+        <!-- <img src="img/logo.svg" alt="Logo Impirial Real State"> -->
         <nav>
             <a href="home.html" >Inicio</a>
             <a href="productos.html"class="activo" >Productos</a>
@@ -36,97 +42,257 @@
         </nav>
         <p class="copyright">&copy; ACME Inc</p>
     </div>
-    <div class="fila grid" style=" background-color: #5f88ff;">
+    <div class="container" style="margin-top: 2rem; background-color: #5f88ff;">
+        <h4>Carrito de compras</h4>
+        <table class="table" style=" background-color: #ffffff;">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Item</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Acción</th>
+              <th scope="col">Total</th>
+            </tr>
+          </thead>
+          <tbody id="items"></tbody>
+          <tfoot>
+            <tr id="footer">
+              <th scope="row" colspan="5">Carrito vacío - comience a seleccionar!</th>
+            </tr>
+          </tfoot>
+        </table>
+        <div class="flex-center" style="background-color: #ffffff"><h1  id="beb">Otros</h1></div>
+        <div class="fila " style=" background-color: #5f88ff; margin-top: 5px;">
+        <div class="row" id="cards">
+
+        </div>
+    </div>
+      </div>
+  
+      <template id="template-footer">
+          <th scope="row" colspan="2">Total productos</th>
+          <td>10</td>
+          <td>
+              <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+                  vaciar todo
+              </button>
+          </td>
+          <td class="font-weight-bold">$ <span>5000</span></td>
+      </template>
+      
+      <template id="template-carrito">
+        <tr>
+          <th scope="row">id</th>
+          <td>Café</td>
+          <td>1</td>
+          <td>
+              <button class="btn btn-info btn-sm">
+                  +
+              </button>
+              <button class="btn btn-danger btn-sm">
+                  -
+              </button>
+          </td>
+          <td>$ <span>500</span></td>
+        </tr>
+      </template>
+  
+      <template id="template-card">
+        <div class="col-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+                <img src="" alt="">
+              <h5>Titulo</h5>
+              <p>precio</p>
+              <button class="btn btn-dark">Agregar</button>
+            </div>
+          </div>
+        </div>
+      </template>
+    <div class="fila grid" style=" background-color: #5f88ff;">       
+    </div>
+    <div class="flex-center"><h1  id="pan">Panadería</h1></div>
+    <div class="fila grid" style=" background-color: #5f88ff; margin-top: 5px;">
+        <div class="card">
+            <img src="img/pan1.jpg" alt="Imagen de casa">
+            <div class="footer-card">
+                <div>
+                    <p>Pan de molde blanco XL 752 g</p>
+                    <p>$2.589</p>
+                </div>
+                <div class="incre-decre flex-center"><button type="submit">Agregar</button><!-- <a href="propiedad1.html">+</a><p> 0 </p><a href="">-</a> --></div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/pan2.jpg" alt="Imagen de casa">
+            <div class="footer-card">
+                <div>
+                    <p>Pan ciabatta rústico granel</p>
+                    <p>$1.295</p>
+                </div>
+                <div class="incre-decre flex-center"><button type="submit">Agregar</button><!-- <a href="propiedad1.html">+</a><p> 0 </p><a href="">-</a> --></div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/pan3.png" alt="Imagen de casa">
+            <div class="footer-card">
+                <div>
+                    <p>Pan de hot dog granel</p>
+                    <p>$1.275</p>
+                </div>
+                <div class="incre-decre flex-center"><button type="submit">Agregar</button><!-- <a href="propiedad1.html">+</a><p> 0 </p><a href="">-</a> --></div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/pan4.jpg" alt="Imagen de casa">
+            <div class="footer-card">
+                <div>
+                    <p>Pan hallulla granel</p>
+                    <p>$1.045</p>
+                </div>
+                <div class="incre-decre flex-center"><button type="submit">Agregar</button><!-- <a href="propiedad1.html">+</a><p> 0 </p><a href="">-</a> --></div>
+            </div>
+        </div>
+    </div>    
+
+    <div class="flex-center"><h1  id="beb">Bebestibles</h1></div>
+    <div class="fila grid" style=" background-color: #5f88ff; margin-top: 5px;">
         <div class="card">
             <img src="img/thumb13.jpg" alt="Imagen de casa">
             <div class="footer-card">
                 <div>
                     <p>Jugo de Naranja Light</p>
-                    <p>3.500$</p>
+                    <p>$3.500</p>
                 </div>
-                <div class="incre-decre flex-center"><button type="submit">Agregar</button><!-- <a href="propiedad1.html">+</a><p> 0 </p><a href="">-</a> --></div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="img/thumb12.jpg" alt="Imagen de casa">
-            <div class="footer-card">
-                <div>
-                    <p>Producto </p>
-                    <p>3.000.000$</p>
+                <div class="incre-decre flex-center">
+                    <button type="submit">Agregar</button><!-- <a href="propiedad1.html">+</a><p> 0 </p><a href="">-</a> -->
                 </div>
-                <div class="incre-decre flex-center"><button type="submit">Agregar</button><!-- <a href="propiedad1.html">+</a><p> 0 </p><a href="">-</a> --></div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="img/thumb14.jpg" alt="Imagen de casa">
-            <div class="footer-card">
-                <div>
-                    <p>Producto  </p>
-                    <p>1.500.000$</p>
-                </div>
-                <div class="incre-decre flex-center"><button type="submit">Agregar</button><!-- <a href="propiedad1.html">+</a><p> 0 </p><a href="">-</a> --></div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="img/thumb11.jpg" alt="Imagen de casa">
-            <div class="footer-card">
-                <div>
-                    <p>Producto  </p>
-                    <p>3.500.000$</p>
-                </div>
-                <div class="incre-decre flex-center"><button type="submit">Agregar</button><!-- <a href="propiedad1.html">+</a><p> 0 </p><a href="">-</a> --></div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="img/thumb15.jpg" alt="Imagen de casa">
-            <div class="footer-card">
-                <div>
-                    <p>Producto </p>
-                    <p>2.500.000$</p>
-                </div>
-                <div class="incre-decre flex-center"><button type="submit">Agregar</button><!-- <a href="propiedad1.html">+</a><p> 0 </p><a href="">-</a> --></div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="img/thumb6.jpg" alt="Imagen de casa">
-            <div class="footer-card">
-                <div>
-                    <p>Producto </p>
-                    <p>4.500.000$</p>
-                </div>
-                <div class="incre-decre flex-center"><button type="submit">Agregar</button><!-- <a href="propiedad1.html">+</a><p> 0 </p><a href="">-</a> --></div>
             </div>
         </div>
         <div class="card">
             <img src="img/thumb8.jpg" alt="Imagen de casa">
             <div class="footer-card">
                 <div>
-                    <p>Producto  </p>
-                    <p>5.500.000$</p>
+                    <p>Coca-Cola sin azúcar 1.5 L</p>
+                    <p>$1.870
+                    </p>
                 </div>
                 <div class="incre-decre flex-center"><button type="submit">Agregar</button><!-- <a href="propiedad1.html">+</a><p> 0 </p><a href="">-</a> --></div>
             </div>
         </div>
         <div class="card">
-            <img src="img/thumb9.jpg" alt="Imagen de casa">
+            <img src="img/bebe1.jpg" alt="Imagen de casa">
             <div class="footer-card">
                 <div>
-                    <p>Producto  </p>
-                    <p>2.500.000$</p>
+                    <p>Jugo fresh manzana 1.5 L</p>
+                    <p>$790
+                    </p>
                 </div>
                 <div class="incre-decre flex-center"><button type="submit">Agregar</button><!-- <a href="propiedad1.html">+</a><p> 0 </p><a href="">-</a> --></div>
             </div>
         </div>
         <div class="card">
-            <img src="img/thumb10.jpg" alt="Imagen de casa">
+            <img src="img/bebe2.jpg" alt="Imagen de casa">
             <div class="footer-card">
                 <div>
-                    <p>Producto   </p>
-                    <p>4.500.000$</p>
+                    <p>
+                        Jugo Bless piña y jengibre 1 L</p>
+                    <p>$3.979</p>
                 </div>
                 <div class="incre-decre flex-center"><button type="submit">Agregar</button><!-- <a href="propiedad1.html">+</a><p> 0 </p><a href="">-</a> --></div>
             </div>
         </div>
+    </div>
+    <div class="flex-center"><h1  id="al">Alcoholes</h1></div>
+    <div class="fila grid" style=" background-color: #5f88ff; margin-top: 5px;">
+        <div class="card">
+            <img src="img/alco2.jpg" alt="Imagen de casa">
+            <div class="footer-card">
+                <div>
+                    <p>Licor de avellanas 700 cc</p>
+                    <p>$14.450</p>
+                </div>
+                <div class="incre-decre flex-center"><button type="submit">Agregar</button><!-- <a href="propiedad1.html">+</a><p> 0 </p><a href="">-</a> --></div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/alco1.jpg" alt="Imagen de casa">
+            <div class="footer-card">
+                <div>
+                    <p>Licor Aperol 11° 750 ml</p>
+                    <p>$9.490</p>
+                </div>
+                <div class="incre-decre flex-center"><button type="submit">Agregar</button><!-- <a href="propiedad1.html">+</a><p> 0 </p><a href="">-</a> --></div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/alco3.jpg" alt="Imagen de casa">
+            <div class="footer-card">
+                <div>
+                    <p>Tequila Blanco 750 cc</p>
+                    <p>$49.990
+                    </p>
+                </div>
+                <div class="incre-decre flex-center"><button type="submit">Agregar</button><!-- <a href="propiedad1.html">+</a><p> 0 </p><a href="">-</a> --></div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/alco4.jpg" alt="Imagen de casa">
+            <div class="footer-card">
+                <div>
+                    <p>Baileys 17° 750 cc</p>
+                    <p>$18.390</p>
+                </div>
+                <div class="incre-decre flex-center"><button type="submit">Agregar</button><!-- <a href="propiedad1.html">+</a><p> 0 </p><a href="">-</a> --></div>
+            </div>
+        </div>
+    </div>
+        <div class="flex-center"><h1  id="lac">Lacteos</h1></div>
+        <div class="fila grid" style=" background-color: #5f88ff; margin-top: 5px;">
+        <div class="card">
+            <img src="img/thumb11.jpg" alt="Imagen de casa">
+            <div class="footer-card">
+                <div>
+                    <p>Leche semidescremada</p>
+                    <p>$999</p>
+                </div>
+                <div class="incre-decre flex-center"><button type="submit">Agregar</button><!-- <a href="propiedad1.html">+</a><p> 0 </p><a href="">-</a> --></div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <img src="img/lac3.jpg" alt="Imagen de casa">
+            <div class="footer-card">
+                <div>
+                    <p>Mantequilla con sal 250 g</p>
+                    <p>$2.399
+                    </p>
+                </div>
+                <div class="incre-decre flex-center"><button type="submit">Agregar</button><!-- <a href="propiedad1.html">+</a><p> 0 </p><a href="">-</a> --></div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/lac1.jpg" alt="Imagen de casa">
+            <div class="footer-card">
+                <div>
+                    <p>Yoghurt proteína</p>
+                    <p>$585</p>
+                </div>
+                <div class="incre-decre flex-center"><button type="submit">Agregar</button><!-- <a href="propiedad1.html">+</a><p> 0 </p><a href="">-</a> --></div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/lac2.jpg" alt="Imagen de casa">
+            <div class="footer-card">
+                <div>
+                    <p>Yoghurt batido</p>
+                    <p>$375</p>
+                </div>
+                <div class="incre-decre flex-center"><button type="submit">Agregar</button><!-- <a href="propiedad1.html">+</a><p> 0 </p><a href="">-</a> --></div>
+            </div>
+        </div>
+    </div>
+        
     </div>  
     <footer class="fila">
         <div class="col-33">
@@ -157,6 +323,156 @@
             </div>
             <p class="copyright m-t">&copy; D'TODITO MARKET All rights reserved</p>
         </div>
+
+        <script>
+            const cards = document.getElementById('cards')
+            const items = document.getElementById('items')
+            const footer = document.getElementById('footer')
+            const templateCard = document.getElementById('template-card').content
+            const templateFooter = document.getElementById('template-footer').content
+            const templateCarrito = document.getElementById('template-carrito').content
+            const fragment = document.createDocumentFragment()
+            let carrito = {}
+
+// Eventos
+// El evento DOMContentLoaded es disparado cuando el documento HTML ha sido completamente cargado y parseado
+document.addEventListener('DOMContentLoaded', e => { fetchData() });
+cards.addEventListener('click', e => { addCarrito(e) });
+items.addEventListener('click', e => { btnAumentarDisminuir(e) })
+
+// Traer productos
+const fetchData = async () => {
+    const res = await fetch('productos.json');
+    const data = await res.json()
+    /* console.log(data.) */
+    pintarCards(data)
+}
+
+// Pintar productos
+const pintarCards = data => {
+    data.forEach(item => {
+        templateCard.querySelector('img').src = item.thumbnailUrl
+        templateCard.querySelector('h5').textContent = item.title
+        templateCard.querySelector('p').textContent = item.precio
+        templateCard.querySelector('button').dataset.id = item.id
+        const clone = templateCard.cloneNode(true)
+        fragment.appendChild(clone)
+    })
+    cards.appendChild(fragment)
+}
+
+// Agregar al carrito
+const addCarrito = e => {
+    if (e.target.classList.contains('btn-dark')) {
+        // console.log(e.target.dataset.id)
+        // console.log(e.target.parentElement)
+        setCarrito(e.target.parentElement)
+    }
+    e.stopPropagation()
+}
+
+const setCarrito = item => {
+    // console.log(item)
+    const producto = {
+        title: item.querySelector('h5').textContent,
+        precio: item.querySelector('p').textContent,
+        id: item.querySelector('button').dataset.id,
+        cantidad: 1
+    }
+    // console.log(producto)
+    if (carrito.hasOwnProperty(producto.id)) {
+        producto.cantidad = carrito[producto.id].cantidad + 1
+    }
+
+    carrito[producto.id] = { ...producto }
+    
+    pintarCarrito()
+}
+
+const pintarFooter = () => {
+    footer.innerHTML = ''
+    
+    if (Object.keys(carrito).length === 0) {
+        footer.innerHTML = `
+        <th scope="row" colspan="5">Carrito vacío con innerHTML</th>
+        `
+        return
+    }
+    
+    // sumar cantidad y sumar totales
+    const nCantidad = Object.values(carrito).reduce((acc, { cantidad }) => acc + cantidad, 0)
+    const nPrecio = Object.values(carrito).reduce((acc, {cantidad, precio}) => acc + cantidad * precio ,0)
+    // console.log(nPrecio)
+
+    templateFooter.querySelectorAll('td')[0].textContent = nCantidad
+    templateFooter.querySelector('span').textContent = nPrecio
+
+    const clone = templateFooter.cloneNode(true)
+    fragment.appendChild(clone)
+
+    footer.appendChild(fragment)
+
+    const boton = document.querySelector('#vaciar-carrito')
+    boton.addEventListener('click', () => {
+        carrito = {}
+        pintarCarrito()
+    })
+
+}
+
+const btnAumentarDisminuir = e => {
+    // console.log(e.target.classList.contains('btn-info'))
+    if (e.target.classList.contains('btn-info')) {
+        const producto = carrito[e.target.dataset.id]
+        producto.cantidad++
+        carrito[e.target.dataset.id] = { ...producto }
+        pintarCarrito()
+    }
+
+    if (e.target.classList.contains('btn-danger')) {
+        const producto = carrito[e.target.dataset.id]
+        producto.cantidad--
+        if (producto.cantidad === 0) {
+            delete carrito[e.target.dataset.id]
+        } else {
+            carrito[e.target.dataset.id] = {...producto}
+        }
+        pintarCarrito()
+    }
+    e.stopPropagation()
+}
+
+document.addEventListener('DOMContentLoaded', e => {
+    fetchData()
+    if (localStorage.getItem('carrito')) {
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        pintarCarrito()
+    }
+});
+
+const pintarCarrito = () => {
+    items.innerHTML = ''
+
+    Object.values(carrito).forEach(producto => {
+        templateCarrito.querySelector('th').textContent = producto.id
+        templateCarrito.querySelectorAll('td')[0].textContent = producto.title
+        templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad
+        templateCarrito.querySelector('span').textContent = producto.precio * producto.cantidad
+        
+        //botones
+        templateCarrito.querySelector('.btn-info').dataset.id = producto.id
+        templateCarrito.querySelector('.btn-danger').dataset.id = producto.id
+
+        const clone = templateCarrito.cloneNode(true)
+        fragment.appendChild(clone)
+    })
+    items.appendChild(fragment)
+
+    pintarFooter()
+
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+}
+        </script>
     </footer>
 </body>
 </html>

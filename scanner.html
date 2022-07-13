@@ -28,15 +28,16 @@
         <p class="copyright">&copy; ACME Inc</p>
     </div>
     <div class="flex-center m-t5">
-        <div class="">
-            <img class="scanner" src="img/scanner2.jpg" alt="Logo App">
+        <div class="flex-center">
+            <div class="" id="camara"></div>
+            <!-- <img class="scanner" src="img/scanner2.jpg" alt="Logo App"> -->
         </div>
     </div>
     <div class="fila">
         <div class="col-100 flex-column-center">
             <form class="contacto">
-                <div class="fila">
-                    <input class="producto" type="text" placeholder="Nombre">
+                <div class="fila" id="resultado" style="color: #000000;">
+                    <input id="resultado" class="producto" type="text" placeholder="Nombre">
                 </div>
                 <div class="fila">
                     <input class="producto" type="email" placeholder="Precio">
@@ -82,5 +83,31 @@
             <p class="copyright m-t">&copy; D'TODITO MARKET All rights reserved</p>
         </div>
     </footer>
+    <script src="/js/quagga.min.js"></script>
+    <script>//libería del scanner
+        Quagga.init({
+        inputStream : {
+            name : "Live",
+            type : "LiveStream",
+            target: document.querySelector('#camara')    
+        },
+        decoder : {
+            readers : ["ean_reader", "code_128_reader"]
+        }
+        }, function(err) {
+            if (err) {
+                console.log(err);
+                return
+            }
+            console.log("Initialization finished. Ready to start");
+            Quagga.start();
+        });
+        
+        Quagga.onDetected(function (data) {
+        console.log(data)
+        document.querySelector('#resultado').innerHTML = data.codeResult.code;
+        
+        });
+        </script>
 </body>
 </html>
